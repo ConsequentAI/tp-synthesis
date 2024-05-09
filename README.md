@@ -23,7 +23,12 @@ killall -9 mm-dataset
 
 # Sample output
 
-Uses the [z3 theorem prover](https://github.com/Z3Prover/z3) to search the space for alternative versions of Strassen's matrix multiplication. If you let it run it will search 2x2x2 --> 5x5x5.
+Uses the [z3 theorem prover](https://github.com/Z3Prover/z3) to search the space for alternative versions of matrix multiplication similar to Strassen's. The first few seconds of a single CPU run are pasted below.
+
+## Why was this built?
+Using theorem proving-based search exploration (for provably correct code synthesis); combined with a model to make guesses of the search parameters, might lead to discovering an algorithm that works better in practice than any other.
+
+The [alphatensor paper](https://deepmind.google/discover/blog/discovering-novel-algorithms-with-alphatensor/) used a pure model-based approach, and it didn't improve on the standard arithmetic algorithm; but it did find better over Z2. There is a possibility that an overall better algorithm exists; and the best bet for finding it is likely by using a combination of "model guesses + tp-based search".
 
 ```
 (venv) $ ./mm-dataset 
