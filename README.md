@@ -1,10 +1,9 @@
-# Simple demo
-Binary demo of theorem proving-based code synthesis; for the simple case of MM
+# Theorem-proving based code synthesis
+Linux binary demo of theorem proving-based code synthesis; for the simple case of MM
 
 # Run instructions
 
-Note 1: Binary for Linux
-Note 2: Change `python3.8` to the relevant one on your system.
+Note: Change `python3.8` to the relevant one on your system.
 
 ```sh
 $ virtualenv venv
