@@ -6,11 +6,19 @@ Linux binary demo of theorem proving-based code synthesis; for the simple case o
 Note: Change `python3.8` to the relevant one on your system.
 
 ```sh
-$ virtualenv venv
-$ source ./venv/bin/activate
-$ pip install -r requirements.txt
-$ export Z3_LIBRARY_PATH="venv/lib/python3.8/site-packages/z3/lib/"
-$ ./mm-dataset
+virtualenv venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+export Z3_LIBRARY_PATH="venv/lib/python3.8/site-packages/z3/lib/"
+
+# single cpu synthesis
+./mm-dataset
+```
+
+Many CPU search for alternative configs:
+```sh
+./mm-dataset --procs 50 --timeout 20000
+killall -9 mm-dataset
 ```
 
 # Sample output
